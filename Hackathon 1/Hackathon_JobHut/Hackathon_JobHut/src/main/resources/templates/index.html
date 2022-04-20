@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Tuyển Dụng Việc Làm</title>
+    <style>
+        .form_wapper {
+            border:1px solid #333 ; 
+            width : 80% ; 
+            height : 80% ;
+            align-content: center;
+            align-items: center ; 
+            margin-left: 100px;
+        }
+        .form_wapper-heading {
+            text-align: center;
+            align-content: center;
+            color: #f54f29
+        }
+        .body-content {
+            grid-template-columns: 50% 50%;
+            display: grid;
+        }
+        .title{
+            margin-left: 30px ;
+            text-align: center;
+        }
+        .list {
+            list-style: none;
+            text-align: center;
+        }
+        .item {
+            margin: 10px 0 ;
+            font-size:20px ; 
+        }
+        .link{
+            text-decoration: none;
+            color: #333 ; 
+        }
+        .link:hover {
+            color: #f54f29 ; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_wapper">
+        <h1 class="form_wapper-heading">Thông tin tuyển dụng </h1>
+        <div class="form_group body-content">
+            <div class="employer">
+                <h2 class="title">Nhà tuyển dụng</h2>
+                <ul class="list">
+                    <li class="item">
+                        <a href="/employer" class="link">Hiển thị danh sách nhà tuyển dụng</a>
+                    </li>
+                    <li class="item">
+                        <a href="/employer/add" class="link">Thêm nhà tuyển dụng </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Applicant">
+                <h2 class="title">Job</h2>
+                <ul class="list">
+                    <li class="item">
+                        <a href="/job" class="link">Hiển thị danh sách Job </a>
+                    </li>
+                    <li class="item">
+                        <a href="/job/add" class="link">Thêm Job </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</div>

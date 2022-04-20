@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Danh Sách Nhà Tuyển Dụng</title>
+      <style>
+            table {
+                  border: 1px solid #333;
+                  width: 70%;
+                  height: 300px;
+                  margin-left: 200px;
+            }
+
+            .headding {
+                  text-align: center;
+                  color: #f54f29;
+            }
+
+            table th {
+                  color: #f54f29;
+                  font-size: 20px;
+                  border: 1px solid #333;
+            }
+
+            table td {
+                  border: 1px solid #333;               
+            }
+            table td a {
+                 margin-right: 70px;
+                 align-content: center;
+            }
+            .link {
+                  margin-top: 30px;
+                  margin-right: 120px;
+            }
+
+            body a {
+                  text-decoration: none;
+                  font-size: 20px;
+                  color: #333;
+                  float: right;
+            }
+
+            body a:hover {
+                  color: #f54f29;
+            }
+
+            tbody {
+                  text-align: center;
+            }
+      </style>
+</head>
+
+<body>
+      <h1 class="headding">Employers</h1>
+      <table class="table">
+            <thead>
+                  <tr>
+                        <th class="title" scope="col">STT</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Website</th>
+                        <th scope="col">Logo</th>
+                        <th scope="col">Email</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr th:each="employer, iStat:${employers}">
+                        <th scope="row" th:text="${iStat.index} + 1"></th>
+                        <td>
+                              <a th:href="|employer/${employer.id}|" th:text="${employer.name}"></a>
+                        </td>
+                        <td>
+                              <a th:href="${employer.website}" th:text="${employer.website}" target="_blank"></a>
+                        </td>
+                        <td>
+                              <img th:src="|/logo/${employer.logo_path}|" width="50px" height="50px" />
+                        </td>
+                        <td th:text="${employer.email}"></td>
+                  </tr>
+            </tbody>
+      </table>
+      <div class="link">
+            <a href="/employer/add">Thêm nhà tuyển dụng </a> <br /><br />
+            <a href="/">Quay về trang chủ</a> <br /><br />
+      </div>
+</body>
+
+</html>
