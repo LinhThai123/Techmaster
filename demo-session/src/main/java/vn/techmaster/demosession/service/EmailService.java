@@ -16,7 +16,7 @@ public class EmailService {
         SimpleMailMessage message = new SimpleMailMessage();
 
         message.setTo(email);
-        message.setText("Mã xác nhận : " + text);
+        message.setText("http://localhost:8081/validate/" + text);
 
         // Send Message!
         emaillSender.send(message);
